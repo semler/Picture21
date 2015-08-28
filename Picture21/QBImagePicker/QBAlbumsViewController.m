@@ -29,7 +29,7 @@ static CGSize CGSizeScale(CGSize size, CGFloat scale) {
 
 @interface QBAlbumsViewController () <PHPhotoLibraryChangeObserver>
 
-@property (nonatomic, strong) IBOutlet UIBarButtonItem *doneButton;
+//@property (nonatomic, strong) IBOutlet UIBarButtonItem *doneButton;
 
 @property (nonatomic, copy) NSArray *fetchResults;
 @property (nonatomic, copy) NSArray *assetCollections;
@@ -65,7 +65,7 @@ static CGSize CGSizeScale(CGSize size, CGFloat scale) {
     
     // Show/hide 'Done' button
     if (self.imagePickerController.allowsMultipleSelection) {
-        [self.navigationItem setRightBarButtonItem:self.doneButton animated:NO];
+//        [self.navigationItem setRightBarButtonItem:self.doneButton animated:NO];
     } else {
         [self.navigationItem setRightBarButtonItem:nil animated:NO];
     }
@@ -101,13 +101,13 @@ static CGSize CGSizeScale(CGSize size, CGFloat scale) {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (IBAction)done:(id)sender
-{
-    if ([self.imagePickerController.delegate respondsToSelector:@selector(qb_imagePickerController:didFinishPickingAssets:)]) {
-        [self.imagePickerController.delegate qb_imagePickerController:self.imagePickerController
-                                               didFinishPickingAssets:self.imagePickerController.selectedAssets.array];
-    }
-}
+//- (IBAction)done:(id)sender
+//{
+//    if ([self.imagePickerController.delegate respondsToSelector:@selector(qb_imagePickerController:didFinishPickingAssets:)]) {
+//        [self.imagePickerController.delegate qb_imagePickerController:self.imagePickerController
+//                                               didFinishPickingAssets:self.imagePickerController.selectedAssets.array];
+//    }
+//}
 
 
 #pragma mark - Toolbar
@@ -253,7 +253,7 @@ static CGSize CGSizeScale(CGSize size, CGFloat scale) {
 
 - (void)updateControlState
 {
-    self.doneButton.enabled = [self isMinimumSelectionLimitFulfilled];
+//    self.doneButton.enabled = [self isMinimumSelectionLimitFulfilled];
 }
 
 

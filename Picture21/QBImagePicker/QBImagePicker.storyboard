@@ -103,15 +103,7 @@
                                 <action selector="cancel:" destination="QL5-wR-LYt" id="l9K-7e-2qt"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="laG-jk-Ma2">
-                            <connections>
-                                <action selector="done:" destination="QL5-wR-LYt" id="Try-7j-DzS"/>
-                            </connections>
-                        </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <outlet property="doneButton" destination="laG-jk-Ma2" id="CV6-AR-B90"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qu9-YY-dvn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
