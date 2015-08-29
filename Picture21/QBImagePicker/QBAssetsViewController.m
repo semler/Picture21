@@ -13,6 +13,8 @@
 #import "QBImagePickerController.h"
 #import "QBAssetCell.h"
 #import "QBVideoIndicatorView.h"
+#import "PictureManager.h"
+#import "Picture21ViewController.h"
 
 static CGSize CGSizeScale(CGSize size, CGFloat scale) {
     return CGSizeMake(size.width * scale, size.height * scale);
@@ -177,10 +179,25 @@ static CGSize CGSizeScale(CGSize size, CGFloat scale) {
 
 - (IBAction)done:(id)sender
 {
-    if ([self.imagePickerController.delegate respondsToSelector:@selector(qb_imagePickerController:didFinishPickingAssets:)]) {
-        [self.imagePickerController.delegate qb_imagePickerController:self.imagePickerController
-                                               didFinishPickingAssets:self.imagePickerController.selectedAssets.array];
+    for (int i = 0; i < self.imagePickerController.selectedAssets.count; i ++) {
+        PHAsset *asset = [self.imagePickerController.selectedAssets objectAtIndex:i];
+        
+//        CGSize itemSize = [(UICollectionViewFlowLayout *)collectionView.collectionViewLayout itemSize];
+        CGSize itemSize = CGSizeMake(77.5, 77.5);
+        CGSize targetSize = CGSizeScale(itemSize, self.traitCollection.displayScale);
+        //画像保存
+        [self.imageManager requestImageForAsset:asset
+                                     targetSize:targetSize
+                                    contentMode:PHImageContentModeAspectFill 
+                                        options:nil
+                                  resultHandler:^(UIImage *result, NSDictionary *info) {
+                                      UIImage *image = result;
+                                      [self saveImage:image index:i];
+                                  }];
     }
+    
+    Picture21ViewController *controller = [[Picture21ViewController alloc] init];
+    [self.navigationController pushViewController:controller animated:YES];
 }
 
 
@@ -656,6 +673,25 @@ static CGSize CGSizeScale(CGSize size, CGFloat scale) {
     CGFloat width = (CGRectGetWidth(self.view.frame) - 2.0 * (numberOfColumns - 1)) / numberOfColumns;
     
     return CGSizeMake(width, width);
+}
+
+-(void)saveImage:(UIImage *)image index:(int) index {
+    // 写真の保存
+    // JPEGのデータとしてNSDataを作成します
+    // ここのUIImageJPEGRepresentationがミソです
+    NSData *dataImage = UIImageJPEGRepresentation(image, 0.8f);
+    // 保存するディレクトリを指定します
+    // ここではデータを保存する為に一般的に使われるDocumentsディレクトリ
+    NSString *path = [NSString stringWithFormat:@"%@/%d%@", [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"], index, @".jpg"];
+    NSLog(@"%@", path);
+    // NSDataのwriteToFileメソッドを使ってファイルに書き込みます
+    // atomically=YESの場合、同名のファイルがあったら、まずは別名で作成して、その後、ファイルの上書きを行います
+    if ([dataImage writeToFile:path atomically:YES]) {
+        NSLog(@"save OK");
+    } else {
+        NSLog(@"save NG");
+    }
+
 }
 
 @end

@@ -25,6 +25,8 @@
 		0DA4142D1B8D533000E78DC0 /* QBSlomoIconView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DA4141E1B8D533000E78DC0 /* QBSlomoIconView.m */; };
 		0DA4142E1B8D533000E78DC0 /* QBVideoIconView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DA414201B8D533000E78DC0 /* QBVideoIconView.m */; };
 		0DA4142F1B8D533000E78DC0 /* QBVideoIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DA414221B8D533000E78DC0 /* QBVideoIndicatorView.m */; };
+		0DB9DCFB1B9186EC0062D53E /* PictureManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DB9DCFA1B9186EC0062D53E /* PictureManager.m */; };
+		0DB9DCFE1B91BE0C0062D53E /* Picture21ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DB9DCFD1B91BE0C0062D53E /* Picture21ViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +67,10 @@
 		0DA414211B8D533000E78DC0 /* QBVideoIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QBVideoIndicatorView.h; sourceTree = "<group>"; };
 		0DA414221B8D533000E78DC0 /* QBVideoIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QBVideoIndicatorView.m; sourceTree = "<group>"; };
 		0DA414231B8D533000E78DC0 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/QBImagePicker.strings"; sourceTree = "<group>"; };
+		0DB9DCF91B9186EC0062D53E /* PictureManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PictureManager.h; sourceTree = "<group>"; };
+		0DB9DCFA1B9186EC0062D53E /* PictureManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PictureManager.m; sourceTree = "<group>"; };
+		0DB9DCFC1B91BE0C0062D53E /* Picture21ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Picture21ViewController.h; sourceTree = "<group>"; };
+		0DB9DCFD1B91BE0C0062D53E /* Picture21ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Picture21ViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +109,8 @@
 				0DA413861B8D4D1000E78DC0 /* AppDelegate.m */,
 				0DA413881B8D4D1000E78DC0 /* ViewController.h */,
 				0DA413891B8D4D1000E78DC0 /* ViewController.m */,
+				0DB9DCF91B9186EC0062D53E /* PictureManager.h */,
+				0DB9DCFA1B9186EC0062D53E /* PictureManager.m */,
 				0DA4138B1B8D4D1000E78DC0 /* Main.storyboard */,
 				0DA4138E1B8D4D1000E78DC0 /* Images.xcassets */,
 				0DA413901B8D4D1000E78DC0 /* LaunchScreen.xib */,
@@ -149,6 +157,8 @@
 				0DA414141B8D533000E78DC0 /* QBAssetCell.m */,
 				0DA414151B8D533000E78DC0 /* QBAssetsViewController.h */,
 				0DA414161B8D533000E78DC0 /* QBAssetsViewController.m */,
+				0DB9DCFC1B91BE0C0062D53E /* Picture21ViewController.h */,
+				0DB9DCFD1B91BE0C0062D53E /* Picture21ViewController.m */,
 				0DA414171B8D533000E78DC0 /* QBCheckmarkView.h */,
 				0DA414181B8D533000E78DC0 /* QBCheckmarkView.m */,
 				0DA414191B8D533000E78DC0 /* QBImagePicker.h */,
@@ -252,7 +262,9 @@
 				0DA4142F1B8D533000E78DC0 /* QBVideoIndicatorView.m in Sources */,
 				0DA414281B8D533000E78DC0 /* QBAssetCell.m in Sources */,
 				0DA413871B8D4D1000E78DC0 /* AppDelegate.m in Sources */,
+				0DB9DCFB1B9186EC0062D53E /* PictureManager.m in Sources */,
 				0DA413841B8D4D1000E78DC0 /* main.m in Sources */,
+				0DB9DCFE1B91BE0C0062D53E /* Picture21ViewController.m in Sources */,
 				0DA4142E1B8D533000E78DC0 /* QBVideoIconView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
