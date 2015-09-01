@@ -13,6 +13,7 @@
 		0D28F1B81B944D7400A2ED62 /* Picture4ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D28F1B71B944D7400A2ED62 /* Picture4ViewController.m */; };
 		0D28F1BB1B944D8900A2ED62 /* Picture6ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D28F1BA1B944D8900A2ED62 /* Picture6ViewController.m */; };
 		0D28F1BE1B9550F600A2ED62 /* SlideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D28F1BD1B9550F600A2ED62 /* SlideViewController.m */; };
+		0D28F1C11B95A81900A2ED62 /* Picture1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D28F1C01B95A81900A2ED62 /* Picture1ViewController.m */; };
 		0DA413841B8D4D1000E78DC0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DA413831B8D4D1000E78DC0 /* main.m */; };
 		0DA413871B8D4D1000E78DC0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DA413861B8D4D1000E78DC0 /* AppDelegate.m */; };
 		0DA4138A1B8D4D1000E78DC0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DA413891B8D4D1000E78DC0 /* ViewController.m */; };
@@ -48,6 +49,8 @@
 		0D28F1BA1B944D8900A2ED62 /* Picture6ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Picture6ViewController.m; sourceTree = "<group>"; };
 		0D28F1BC1B9550F600A2ED62 /* SlideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideViewController.h; sourceTree = "<group>"; };
 		0D28F1BD1B9550F600A2ED62 /* SlideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideViewController.m; sourceTree = "<group>"; };
+		0D28F1BF1B95A81900A2ED62 /* Picture1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Picture1ViewController.h; sourceTree = "<group>"; };
+		0D28F1C01B95A81900A2ED62 /* Picture1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Picture1ViewController.m; sourceTree = "<group>"; };
 		0DA4137E1B8D4D1000E78DC0 /* Picture21.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Picture21.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DA413821B8D4D1000E78DC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0DA413831B8D4D1000E78DC0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -181,6 +184,8 @@
 				0DA414161B8D533000E78DC0 /* QBAssetsViewController.m */,
 				0DB9DCFC1B91BE0C0062D53E /* Picture21ViewController.h */,
 				0DB9DCFD1B91BE0C0062D53E /* Picture21ViewController.m */,
+				0D28F1BF1B95A81900A2ED62 /* Picture1ViewController.h */,
+				0D28F1C01B95A81900A2ED62 /* Picture1ViewController.m */,
 				0D28F1B01B94486600A2ED62 /* Picture2ViewController.h */,
 				0D28F1B11B94486600A2ED62 /* Picture2ViewController.m */,
 				0D28F1B31B944D6100A2ED62 /* Picture3ViewController.h */,
@@ -286,6 +291,7 @@
 				0D28F1B21B94486600A2ED62 /* Picture2ViewController.m in Sources */,
 				0DA414261B8D533000E78DC0 /* QBAlbumCell.m in Sources */,
 				0DA414291B8D533000E78DC0 /* QBAssetsViewController.m in Sources */,
+				0D28F1C11B95A81900A2ED62 /* Picture1ViewController.m in Sources */,
 				0DA4142C1B8D533000E78DC0 /* QBImagePickerController.m in Sources */,
 				0DA414271B8D533000E78DC0 /* QBAlbumsViewController.m in Sources */,
 				0DA4142A1B8D533000E78DC0 /* QBCheckmarkView.m in Sources */,

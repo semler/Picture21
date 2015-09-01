@@ -26,6 +26,8 @@
         label.text = [NSString stringWithFormat:@"%d", [[_pictures objectAtIndex:i] intValue]+1];
         NSString *path = [NSString stringWithFormat:@"%@/%d%@", [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"], [[_pictures objectAtIndex:i] intValue], @".jpg"];
         UIImageView *imageView = [imageViews objectAtIndex:i];
+        imageView.contentMode = UIViewContentModeScaleAspectFill;
+        imageView.clipsToBounds = YES;
         imageView.image = [UIImage imageWithContentsOfFile:path];
     }
 }

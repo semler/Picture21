@@ -38,6 +38,8 @@
     for (UIImageView *imageView in imageViews) {
         
         NSString *path = [NSString stringWithFormat:@"%@/%d%@", [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"], (int)imageView.tag, @".jpg"];
+        imageView.contentMode = UIViewContentModeScaleAspectFill;
+        imageView.clipsToBounds = YES;
         imageView.image = [UIImage imageWithContentsOfFile:path];
     }
     

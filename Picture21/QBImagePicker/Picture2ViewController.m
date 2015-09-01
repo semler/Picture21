@@ -28,6 +28,10 @@
     
     NSString *path1 = [NSString stringWithFormat:@"%@/%d%@", [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"], [[_pictures objectAtIndex:0] intValue], @".jpg"];
     NSString *path2 = [NSString stringWithFormat:@"%@/%d%@", [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"], [[_pictures objectAtIndex:1] intValue], @".jpg"];
+    imageView1.contentMode = UIViewContentModeScaleAspectFill;
+    imageView1.clipsToBounds = YES;
+    imageView2.contentMode = UIViewContentModeScaleAspectFill;
+    imageView2.clipsToBounds = YES;
     imageView1.image = [UIImage imageWithContentsOfFile:path1];
     imageView2.image = [UIImage imageWithContentsOfFile:path2];
     

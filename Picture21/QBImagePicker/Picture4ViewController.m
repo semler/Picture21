@@ -36,6 +36,14 @@
     NSString *path2 = [NSString stringWithFormat:@"%@/%d%@", [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"], [[_pictures objectAtIndex:1] intValue], @".jpg"];
     NSString *path3 = [NSString stringWithFormat:@"%@/%d%@", [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"], [[_pictures objectAtIndex:2] intValue], @".jpg"];
     NSString *path4 = [NSString stringWithFormat:@"%@/%d%@", [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"], [[_pictures objectAtIndex:3] intValue], @".jpg"];
+    imageView1.contentMode = UIViewContentModeScaleAspectFill;
+    imageView1.clipsToBounds = YES;
+    imageView2.contentMode = UIViewContentModeScaleAspectFill;
+    imageView2.clipsToBounds = YES;
+    imageView3.contentMode = UIViewContentModeScaleAspectFill;
+    imageView3.clipsToBounds = YES;
+    imageView4.contentMode = UIViewContentModeScaleAspectFill;
+    imageView4.clipsToBounds = YES;
     imageView1.image = [UIImage imageWithContentsOfFile:path1];
     imageView2.image = [UIImage imageWithContentsOfFile:path2];
     imageView3.image = [UIImage imageWithContentsOfFile:path3];
