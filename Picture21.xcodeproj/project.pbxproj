@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D28F1AF1B943AC200A2ED62 /* ClickButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D28F1AE1B943AC200A2ED62 /* ClickButton.m */; };
+		0D28F1B21B94486600A2ED62 /* Picture2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D28F1B11B94486600A2ED62 /* Picture2ViewController.m */; };
+		0D28F1B51B944D6100A2ED62 /* Picture3ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D28F1B41B944D6100A2ED62 /* Picture3ViewController.m */; };
+		0D28F1B81B944D7400A2ED62 /* Picture4ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D28F1B71B944D7400A2ED62 /* Picture4ViewController.m */; };
+		0D28F1BB1B944D8900A2ED62 /* Picture6ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D28F1BA1B944D8900A2ED62 /* Picture6ViewController.m */; };
 		0DA413841B8D4D1000E78DC0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DA413831B8D4D1000E78DC0 /* main.m */; };
 		0DA413871B8D4D1000E78DC0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DA413861B8D4D1000E78DC0 /* AppDelegate.m */; };
 		0DA4138A1B8D4D1000E78DC0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DA413891B8D4D1000E78DC0 /* ViewController.m */; };
@@ -30,6 +35,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0D28F1AD1B943AC200A2ED62 /* ClickButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClickButton.h; sourceTree = "<group>"; };
+		0D28F1AE1B943AC200A2ED62 /* ClickButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClickButton.m; sourceTree = "<group>"; };
+		0D28F1B01B94486600A2ED62 /* Picture2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Picture2ViewController.h; sourceTree = "<group>"; };
+		0D28F1B11B94486600A2ED62 /* Picture2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Picture2ViewController.m; sourceTree = "<group>"; };
+		0D28F1B31B944D6100A2ED62 /* Picture3ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Picture3ViewController.h; sourceTree = "<group>"; };
+		0D28F1B41B944D6100A2ED62 /* Picture3ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Picture3ViewController.m; sourceTree = "<group>"; };
+		0D28F1B61B944D7400A2ED62 /* Picture4ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Picture4ViewController.h; sourceTree = "<group>"; };
+		0D28F1B71B944D7400A2ED62 /* Picture4ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Picture4ViewController.m; sourceTree = "<group>"; };
+		0D28F1B91B944D8900A2ED62 /* Picture6ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Picture6ViewController.h; sourceTree = "<group>"; };
+		0D28F1BA1B944D8900A2ED62 /* Picture6ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Picture6ViewController.m; sourceTree = "<group>"; };
 		0DA4137E1B8D4D1000E78DC0 /* Picture21.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Picture21.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DA413821B8D4D1000E78DC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0DA413831B8D4D1000E78DC0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -111,6 +126,8 @@
 				0DA413891B8D4D1000E78DC0 /* ViewController.m */,
 				0DB9DCF91B9186EC0062D53E /* PictureManager.h */,
 				0DB9DCFA1B9186EC0062D53E /* PictureManager.m */,
+				0D28F1AD1B943AC200A2ED62 /* ClickButton.h */,
+				0D28F1AE1B943AC200A2ED62 /* ClickButton.m */,
 				0DA4138B1B8D4D1000E78DC0 /* Main.storyboard */,
 				0DA4138E1B8D4D1000E78DC0 /* Images.xcassets */,
 				0DA413901B8D4D1000E78DC0 /* LaunchScreen.xib */,
@@ -159,6 +176,14 @@
 				0DA414161B8D533000E78DC0 /* QBAssetsViewController.m */,
 				0DB9DCFC1B91BE0C0062D53E /* Picture21ViewController.h */,
 				0DB9DCFD1B91BE0C0062D53E /* Picture21ViewController.m */,
+				0D28F1B01B94486600A2ED62 /* Picture2ViewController.h */,
+				0D28F1B11B94486600A2ED62 /* Picture2ViewController.m */,
+				0D28F1B31B944D6100A2ED62 /* Picture3ViewController.h */,
+				0D28F1B41B944D6100A2ED62 /* Picture3ViewController.m */,
+				0D28F1B61B944D7400A2ED62 /* Picture4ViewController.h */,
+				0D28F1B71B944D7400A2ED62 /* Picture4ViewController.m */,
+				0D28F1B91B944D8900A2ED62 /* Picture6ViewController.h */,
+				0D28F1BA1B944D8900A2ED62 /* Picture6ViewController.m */,
 				0DA414171B8D533000E78DC0 /* QBCheckmarkView.h */,
 				0DA414181B8D533000E78DC0 /* QBCheckmarkView.m */,
 				0DA414191B8D533000E78DC0 /* QBImagePicker.h */,
@@ -252,6 +277,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D28F1B81B944D7400A2ED62 /* Picture4ViewController.m in Sources */,
+				0D28F1B21B94486600A2ED62 /* Picture2ViewController.m in Sources */,
 				0DA414261B8D533000E78DC0 /* QBAlbumCell.m in Sources */,
 				0DA414291B8D533000E78DC0 /* QBAssetsViewController.m in Sources */,
 				0DA4142C1B8D533000E78DC0 /* QBImagePickerController.m in Sources */,
@@ -259,10 +286,13 @@
 				0DA4142A1B8D533000E78DC0 /* QBCheckmarkView.m in Sources */,
 				0DA4142D1B8D533000E78DC0 /* QBSlomoIconView.m in Sources */,
 				0DA4138A1B8D4D1000E78DC0 /* ViewController.m in Sources */,
+				0D28F1BB1B944D8900A2ED62 /* Picture6ViewController.m in Sources */,
+				0D28F1B51B944D6100A2ED62 /* Picture3ViewController.m in Sources */,
 				0DA4142F1B8D533000E78DC0 /* QBVideoIndicatorView.m in Sources */,
 				0DA414281B8D533000E78DC0 /* QBAssetCell.m in Sources */,
 				0DA413871B8D4D1000E78DC0 /* AppDelegate.m in Sources */,
 				0DB9DCFB1B9186EC0062D53E /* PictureManager.m in Sources */,
+				0D28F1AF1B943AC200A2ED62 /* ClickButton.m in Sources */,
 				0DA413841B8D4D1000E78DC0 /* main.m in Sources */,
 				0DB9DCFE1B91BE0C0062D53E /* Picture21ViewController.m in Sources */,
 				0DA4142E1B8D533000E78DC0 /* QBVideoIconView.m in Sources */,

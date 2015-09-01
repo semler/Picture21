@@ -12,7 +12,7 @@
 
 + (PictureManager *)sharedManager;
 
-@property (nonatomic, strong) NSMutableArray *pathArray;
+//@property (nonatomic, strong) NSMutableArray *selectButton;
 
 
 @end

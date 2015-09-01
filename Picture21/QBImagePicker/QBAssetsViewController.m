@@ -196,7 +196,7 @@ static CGSize CGSizeScale(CGSize size, CGFloat scale) {
                                   }];
     }
     
-    Picture21ViewController *controller = [[Picture21ViewController alloc] init];
+    Picture21ViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"picture21"];
     [self.navigationController pushViewController:controller animated:YES];
 }
 
