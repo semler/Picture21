@@ -87,6 +87,8 @@ static CGSize CGSizeScale(CGSize size, CGFloat scale) {
 {
     [super viewWillAppear:animated];
     
+    [self.navigationController setToolbarHidden:NO animated:NO];
+    
     // Configure navigation item
     self.navigationItem.title = self.assetCollection.localizedTitle;
     self.navigationItem.prompt = self.imagePickerController.prompt;

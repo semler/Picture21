@@ -33,7 +33,6 @@
 -(void)viewDidLoad {
     [super viewDidLoad];
     
-//    self.navigationController.navigationBar.hidden = YES;
     [self.navigationController setToolbarHidden:YES animated:NO];
     
     for (UIImageView *imageView in imageViews) {

@@ -59,6 +59,8 @@ static CGSize CGSizeScale(CGSize size, CGFloat scale) {
 {
     [super viewWillAppear:animated];
     
+    [self.navigationController setToolbarHidden:YES animated:NO];
+    
     // Configure navigation item
     self.navigationItem.title = NSLocalizedStringFromTableInBundle(@"albums.title", @"QBImagePicker", self.imagePickerController.assetBundle, nil);
     self.navigationItem.prompt = self.imagePickerController.prompt;

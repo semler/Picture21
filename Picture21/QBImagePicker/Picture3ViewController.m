@@ -23,7 +23,6 @@
 -(void)viewDidLoad {
     [super viewDidLoad];
     
-    //    self.navigationController.navigationBar.hidden = YES;
     [self.navigationController setToolbarHidden:YES animated:NO];
     
     label1.text = [NSString stringWithFormat:@"%d", [[_pictures objectAtIndex:0] intValue]+1];

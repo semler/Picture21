@@ -19,7 +19,6 @@
 -(void)viewDidLoad {
     [super viewDidLoad];
     
-    //    self.navigationController.navigationBar.hidden = YES;
     [self.navigationController setToolbarHidden:YES animated:NO];
     
     for (int i = 0; i < labels.count; i ++) {
