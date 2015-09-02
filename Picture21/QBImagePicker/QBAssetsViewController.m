@@ -603,11 +603,17 @@ static CGSize CGSizeScale(CGSize size, CGFloat scale) {
         }
         
         // Add asset to set
-        [selectedAssets addObject:asset];
+//        [selectedAssets addObject:asset];
+        for (int i = (int)indexPath.item; i < (int)indexPath.item + 21; i++) {
+            PHAsset *asset = self.fetchResult[i];
+            [selectedAssets addObject:asset];
+        }
         
         self.lastSelectedItemIndexPath = indexPath;
         
         [self updateDoneButtonState];
+        [self updateSelectionInfo];
+        [self.collectionView reloadData];
         
         if (imagePickerController.showsNumberOfSelectedAssets) {
             [self updateSelectionInfo];
