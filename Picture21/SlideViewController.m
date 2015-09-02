@@ -65,7 +65,9 @@
 - (void)initSlideShowImageView
 {
     //UIImageViewを初期化
-    imageView = [[UIImageView alloc] initWithFrame:CGRectMake(screenWidth/2-300, screenHeight/2-330, 600, 660)];
+    imageView = [[UIImageView alloc] initWithFrame:CGRectMake(267, 114, 490, 539)];
+    imageView.contentMode = UIViewContentModeScaleAspectFill;
+    imageView.clipsToBounds = YES;
     //UIImageViewに画像を表示
     imageView.hidden = YES;
     //UIImageViewを UIViewに乗せる

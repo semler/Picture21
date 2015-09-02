@@ -12,7 +12,7 @@
 
 + (PictureManager *)sharedManager;
 
-//@property (nonatomic, strong) NSMutableArray *selectButton;
+@property (nonatomic) BOOL isNameMode;
 
 
 @end

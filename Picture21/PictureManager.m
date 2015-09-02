@@ -21,7 +21,7 @@ static PictureManager *manager = nil;
 
 - (id)init
 {
-//    _selectButton = [NSMutableArray array];
+    
     return self;
 }
 

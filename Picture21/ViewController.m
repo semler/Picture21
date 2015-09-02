@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "QBImagePickerController.h"
 #import "SlideViewController.h"
+#import "PictureManager.h"
 #define screenWidth            [UIScreen mainScreen].bounds.size.width
 #define screenHeight           [UIScreen mainScreen].bounds.size.height
 
@@ -32,13 +33,19 @@
     picker.allowsMultipleSelection = YES;
     picker.showsNumberOfSelectedAssets = YES;
     
-    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(screenWidth/2-100, screenHeight/2-80, 200, 80)];
-    [button setTitle:@"画像を読み込み" forState:UIControlStateNormal];
+    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(screenWidth/2-120, screenHeight/2-120, 240, 80)];
+    [button setTitle:@"画像を読み込み（名前）" forState:UIControlStateNormal];
     [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [button addTarget:self action:@selector(load) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button];
     
-    slideButton = [[UIButton alloc] initWithFrame:CGRectMake(screenWidth/2-100, screenHeight/2, 200, 80)];
+    UIButton *button2 = [[UIButton alloc] initWithFrame:CGRectMake(screenWidth/2-120, screenHeight/2-40, 240, 80)];
+    [button2 setTitle:@"画像を読み込み（普通画像）" forState:UIControlStateNormal];
+    [button2 setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [button2 addTarget:self action:@selector(load2) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:button2];
+    
+    slideButton = [[UIButton alloc] initWithFrame:CGRectMake(screenWidth/2-120, screenHeight/2+40, 240, 80)];
     [slideButton setTitle:@"スライドショー" forState:UIControlStateNormal];
     [slideButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [slideButton addTarget:self action:@selector(slide) forControlEvents:UIControlEventTouchUpInside];
@@ -69,12 +76,16 @@
 }
 
 - (void)load {
+    [PictureManager sharedManager].isNameMode = YES;
+    [self.navigationController presentViewController:picker animated:YES completion:nil];
+}
+
+- (void)load2 {
+    [PictureManager sharedManager].isNameMode = NO;
     [self.navigationController presentViewController:picker animated:YES completion:nil];
 }
 
 - (void)slide {
-//    SlideViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"slideShow"];
-//    [self.navigationController presentViewController:controller animated:YES completion:nil];
     SlideViewController *controller = [[SlideViewController alloc] init];
     [self.navigationController presentViewController:controller animated:YES completion:nil];
 }
