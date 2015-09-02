@@ -298,6 +298,11 @@ static CGSize CGSizeScale(CGSize size, CGFloat scale) {
 - (void)updateDoneButtonState
 {
     self.doneButton.enabled = [self isMinimumSelectionLimitFulfilled];
+    if (self.imagePickerController.selectedAssets.count == 21) {
+        self.doneButton.enabled = YES;
+    } else {
+        self.doneButton.enabled = NO;
+    }
 }
 
 
@@ -603,17 +608,23 @@ static CGSize CGSizeScale(CGSize size, CGFloat scale) {
         }
         
         // Add asset to set
-//        [selectedAssets addObject:asset];
-        for (int i = (int)indexPath.item; i < (int)indexPath.item + 21; i++) {
-            PHAsset *asset = self.fetchResult[i];
+        if ([PictureManager sharedManager].isNameMode) {
             [selectedAssets addObject:asset];
+        } else {
+            for (int i = (int)indexPath.item; i < (int)indexPath.item + 21; i++) {
+                if (i >= self.fetchResult.count) {
+                    break;
+                }
+                PHAsset *asset = self.fetchResult[i];
+                [selectedAssets addObject:asset];
+            }
+            
+            [self.collectionView reloadData];
         }
         
         self.lastSelectedItemIndexPath = indexPath;
         
         [self updateDoneButtonState];
-        [self updateSelectionInfo];
-        [self.collectionView reloadData];
         
         if (imagePickerController.showsNumberOfSelectedAssets) {
             [self updateSelectionInfo];
