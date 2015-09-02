@@ -23,7 +23,9 @@
     
     for (int i = 0; i < labels.count; i ++) {
         UILabel *label = [labels objectAtIndex:i];
-        label.text = [NSString stringWithFormat:@"%d", [[_pictures objectAtIndex:i] intValue]+1];
+        if ([[_pictures objectAtIndex:i] intValue] != 0) {
+            label.text = [NSString stringWithFormat:@"%d", [[_pictures objectAtIndex:i] intValue]];
+        }
         NSString *path = [NSString stringWithFormat:@"%@/%d%@", [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"], [[_pictures objectAtIndex:i] intValue], @".jpg"];
         UIImageView *imageView = [imageViews objectAtIndex:i];
         imageView.contentMode = UIViewContentModeScaleAspectFill;

@@ -7,6 +7,7 @@
 //
 
 #import "Picture21ViewController.h"
+#import "Picture1ViewController.h"
 #import "Picture2ViewController.h"
 #import "Picture3ViewController.h"
 #import "Picture4ViewController.h"
@@ -71,7 +72,11 @@
         }
     }
     
-    if (pictures.count == 2) {
+    if (pictures.count == 1) {
+        Picture1ViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"picture1"];
+        controller.pictures = pictures;
+        [self.navigationController pushViewController:controller animated:YES];
+    } else if (pictures.count == 2) {
         Picture2ViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"picture2"];
         controller.pictures = pictures;
         [self.navigationController pushViewController:controller animated:YES];

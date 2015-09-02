@@ -23,8 +23,12 @@
     
     [self.navigationController setToolbarHidden:YES animated:NO];
     
-    label1.text = [NSString stringWithFormat:@"%d", [[_pictures objectAtIndex:0] intValue]+1];
-    label2.text = [NSString stringWithFormat:@"%d", [[_pictures objectAtIndex:1] intValue]+1];
+    if ([[_pictures objectAtIndex:0] intValue] != 0) {
+        label1.text = [NSString stringWithFormat:@"%d", [[_pictures objectAtIndex:0] intValue]];
+    }
+    if ([[_pictures objectAtIndex:1] intValue] != 0) {
+        label2.text = [NSString stringWithFormat:@"%d", [[_pictures objectAtIndex:1] intValue]];
+    }
     
     NSString *path1 = [NSString stringWithFormat:@"%@/%d%@", [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"], [[_pictures objectAtIndex:0] intValue], @".jpg"];
     NSString *path2 = [NSString stringWithFormat:@"%@/%d%@", [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"], [[_pictures objectAtIndex:1] intValue], @".jpg"];

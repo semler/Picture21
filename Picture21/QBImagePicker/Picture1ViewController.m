@@ -21,7 +21,9 @@
     
     [self.navigationController setToolbarHidden:YES animated:NO];
     
-    label.text = [NSString stringWithFormat:@"%d", [[_pictures objectAtIndex:0] intValue]+1];
+    if ([[_pictures objectAtIndex:0] intValue] != 0) {
+        label.text = [NSString stringWithFormat:@"%d", [[_pictures objectAtIndex:0] intValue]];
+    }
     
     NSString *path = [NSString stringWithFormat:@"%@/%d%@", [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"], [[_pictures objectAtIndex:0] intValue], @".jpg"];
     imageView.contentMode = UIViewContentModeScaleAspectFill;
