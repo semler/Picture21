@@ -15,7 +15,6 @@
 
 @interface ViewController () <QBImagePickerControllerDelegate> {
     QBImagePickerController *picker;
-    UIButton *slideButton;
 }
 
 @end
@@ -33,42 +32,21 @@
     picker.allowsMultipleSelection = YES;
     picker.showsNumberOfSelectedAssets = YES;
     
-    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(screenWidth/2-120, screenHeight/2-120, 240, 80)];
+    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(screenWidth/2-120, screenHeight/2-80, 240, 80)];
     [button setTitle:@"画像を読み込み（名前）" forState:UIControlStateNormal];
     [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [button addTarget:self action:@selector(load) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button];
     
-    UIButton *button2 = [[UIButton alloc] initWithFrame:CGRectMake(screenWidth/2-120, screenHeight/2-40, 240, 80)];
+    UIButton *button2 = [[UIButton alloc] initWithFrame:CGRectMake(screenWidth/2-120, screenHeight/2, 240, 80)];
     [button2 setTitle:@"画像を読み込み（普通画像）" forState:UIControlStateNormal];
     [button2 setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [button2 addTarget:self action:@selector(load2) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button2];
-    
-    slideButton = [[UIButton alloc] initWithFrame:CGRectMake(screenWidth/2-120, screenHeight/2+40, 240, 80)];
-    [slideButton setTitle:@"スライドショー" forState:UIControlStateNormal];
-    [slideButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    [slideButton addTarget:self action:@selector(slide) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:slideButton];
 }
 
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    
-    BOOL show = YES;
-    for (int i = 0; i < 11; i ++) {
-        NSString *path = [NSString stringWithFormat:@"%@/%d%@", [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"], i, @".jpg"];
-        NSFileManager *fileManager = [NSFileManager defaultManager];
-        if (![fileManager fileExistsAtPath:path]) {
-            show = NO;
-            break;
-        }
-    }
-    if (show) {
-        slideButton.enabled = YES;
-    } else {
-        slideButton.enabled = NO;
-    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -83,11 +61,6 @@
 - (void)load2 {
     [PictureManager sharedManager].isNameMode = NO;
     [self.navigationController presentViewController:picker animated:YES completion:nil];
-}
-
-- (void)slide {
-    SlideViewController *controller = [[SlideViewController alloc] init];
-    [self.navigationController presentViewController:controller animated:YES completion:nil];
 }
 
 @end

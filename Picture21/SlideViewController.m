@@ -68,7 +68,7 @@
 {
     //スライドショーで使用する画像タイトル定義
     slideShowImages = [NSMutableArray array];
-    for (int i = 0; i < 21; i ++) {
+    for (int i = 1; i < 21; i ++) {
         NSString *path = [NSString stringWithFormat:@"%@/%d%@", [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"], i, @".jpg"];
         [slideShowImages addObject:path];
     }
@@ -124,7 +124,7 @@
     if ([self isLastImage]) {
 //        currentImageIndex = -1;
         [self stopSlideShow];
-        [self dismissViewControllerAnimated:YES completion:nil];
+        [self dismissViewControllerAnimated:NO completion:nil];
         return;
     }
     //次の画像を表示
@@ -145,13 +145,24 @@
         imageView.image = [UIImage imageWithContentsOfFile:[slideShowImages objectAtIndex:currentImageIndex-1]];
         imageView.hidden = NO;
     }
-    //フェードイン開始
-//    imageView.alpha = 0;
-//    [UIView beginAnimations:@"fadeIn" context:nil];
-//    [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
-//    [UIView setAnimationDuration:slideShowFadeInDuration];
-//    imageView.alpha = 1;
-//    [UIView commitAnimations];
+    
+    if (currentImageIndex == 22) {
+        NSError *error = nil;
+        // 再生する audio ファイルのパスを取得
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"drop" ofType:@"wav"];
+        // パスから、再生するURLを作成する
+        NSURL *url = [[NSURL alloc] initFileURLWithPath:path];
+        // auido を再生するプレイヤーを作成する
+        self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
+        // エラーが起きたとき
+        if ( error != nil )
+        {
+            NSLog(@"Error %@", [error localizedDescription]);
+        }
+        // 自分自身をデリゲートに設定
+        [self.audioPlayer setDelegate:self];
+    }
+    
     if (self.audioPlayer.playing) {
         [self.audioPlayer stop];
     }

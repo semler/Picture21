@@ -48,6 +48,7 @@
     }
     
     pictures = [NSMutableArray array];
+    [okButton setEnabled:NO];
 }
 
 - (IBAction)buttonsPressed:(id)sender {
@@ -59,13 +60,20 @@
         button.isClicked = YES;
     }
     
+    int sum = 0;
     NSString *message = @"選択した写真：";
     for (ClickButton *button in buttons) {
         if (button.isClicked) {
             message = [NSString stringWithFormat:@"%@%d ", message, (int)button.tag];
+            sum ++;
         }
     }
     messageLabel.text = message;
+    if (sum >= 1 && sum <= 6) {
+        [okButton setEnabled:YES];
+    } else {
+        [okButton setEnabled:NO];
+    }
 }
 
 - (IBAction)okButtonPressed:(id)sender {
@@ -75,7 +83,6 @@
         if (button.isClicked) {
             [pictures addObject:[NSNumber numberWithInt:(int)button.tag]];
         }
-        NSLog(@"%d", (int)button.tag);
     }
     
     if (pictures.count == 1) {

@@ -17,6 +17,7 @@
 		0D872E7C1B97D924004779BC /* Picture5ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D872E7B1B97D924004779BC /* Picture5ViewController.m */; };
 		0D872E821B981A0E004779BC /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D872E811B981A0E004779BC /* AVFoundation.framework */; };
 		0D872E841B9822E5004779BC /* slide.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0D872E831B9822E5004779BC /* slide.wav */; };
+		0D872E861B9839F9004779BC /* drop.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0D872E851B9839F9004779BC /* drop.wav */; };
 		0DA413841B8D4D1000E78DC0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DA413831B8D4D1000E78DC0 /* main.m */; };
 		0DA413871B8D4D1000E78DC0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DA413861B8D4D1000E78DC0 /* AppDelegate.m */; };
 		0DA4138A1B8D4D1000E78DC0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DA413891B8D4D1000E78DC0 /* ViewController.m */; };
@@ -58,6 +59,7 @@
 		0D872E7B1B97D924004779BC /* Picture5ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Picture5ViewController.m; sourceTree = "<group>"; };
 		0D872E811B981A0E004779BC /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		0D872E831B9822E5004779BC /* slide.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = slide.wav; sourceTree = "<group>"; };
+		0D872E851B9839F9004779BC /* drop.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = drop.wav; sourceTree = "<group>"; };
 		0DA4137E1B8D4D1000E78DC0 /* Picture21.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Picture21.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DA413821B8D4D1000E78DC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0DA413831B8D4D1000E78DC0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				0D872E831B9822E5004779BC /* slide.wav */,
+				0D872E851B9839F9004779BC /* drop.wav */,
 				0D872E811B981A0E004779BC /* AVFoundation.framework */,
 				0DA413801B8D4D1000E78DC0 /* Picture21 */,
 				0DA4137F1B8D4D1000E78DC0 /* Products */,
@@ -266,6 +269,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0DA4138D1B8D4D1000E78DC0 /* Main.storyboard in Resources */,
+				0D872E861B9839F9004779BC /* drop.wav in Resources */,
 				0D872E841B9822E5004779BC /* slide.wav in Resources */,
 				0DA414241B8D533000E78DC0 /* QBImagePicker.strings in Resources */,
 				0DA413921B8D4D1000E78DC0 /* LaunchScreen.xib in Resources */,
