@@ -51,6 +51,14 @@
     [okButton setEnabled:NO];
 }
 
+-(void) viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    
+    
+    
+}
+
 - (IBAction)buttonsPressed:(id)sender {
     ClickButton *button = (ClickButton *)sender;
     

@@ -9,7 +9,7 @@
 #import "SlideViewController.h"
 #import <AVFoundation/AVFoundation.h>
 
-#define slideShowTimerInterval      2.0f //スライドが切り替わる秒数を設定
+#define slideShowTimerInterval      1.0f //スライドが切り替わる秒数を設定
 
 @interface SlideViewController () <AVAudioPlayerDelegate>{
     UIImageView *imageView;
@@ -39,6 +39,10 @@
     [self initSlideShowImageView];
     //スライドショー開始
     [self startSlideShow];
+}
+
+- (void) viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
 }
 
 - (void)didReceiveMemoryWarning
@@ -139,14 +143,14 @@
     //画像ファイル名をセット
     if (currentImageIndex == 0) {
         imageView.hidden = YES;
-    } else if (currentImageIndex == 22) {
+    } else if (currentImageIndex == 21) {
         imageView.hidden = YES;
     } else {
         imageView.image = [UIImage imageWithContentsOfFile:[slideShowImages objectAtIndex:currentImageIndex-1]];
         imageView.hidden = NO;
     }
     
-    if (currentImageIndex == 22) {
+    if (currentImageIndex == 21) {
         NSError *error = nil;
         // 再生する audio ファイルのパスを取得
         NSString *path = [[NSBundle mainBundle] pathForResource:@"drop" ofType:@"wav"];
@@ -195,7 +199,7 @@
     return (slideShowImageNum <= currentImageIndex);
 }
 
--(void)animation: (UIImageView *) view {
+-(void)animation: (UIView *) view {
     //なにがしかのUIViewからlayerを取得
     CALayer *layer = view.layer;
     
