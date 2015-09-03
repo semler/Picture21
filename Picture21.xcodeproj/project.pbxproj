@@ -14,6 +14,7 @@
 		0D28F1BB1B944D8900A2ED62 /* Picture6ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D28F1BA1B944D8900A2ED62 /* Picture6ViewController.m */; };
 		0D28F1BE1B9550F600A2ED62 /* SlideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D28F1BD1B9550F600A2ED62 /* SlideViewController.m */; };
 		0D28F1C11B95A81900A2ED62 /* Picture1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D28F1C01B95A81900A2ED62 /* Picture1ViewController.m */; };
+		0D872E7C1B97D924004779BC /* Picture5ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D872E7B1B97D924004779BC /* Picture5ViewController.m */; };
 		0DA413841B8D4D1000E78DC0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DA413831B8D4D1000E78DC0 /* main.m */; };
 		0DA413871B8D4D1000E78DC0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DA413861B8D4D1000E78DC0 /* AppDelegate.m */; };
 		0DA4138A1B8D4D1000E78DC0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DA413891B8D4D1000E78DC0 /* ViewController.m */; };
@@ -51,6 +52,8 @@
 		0D28F1BD1B9550F600A2ED62 /* SlideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideViewController.m; sourceTree = "<group>"; };
 		0D28F1BF1B95A81900A2ED62 /* Picture1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Picture1ViewController.h; sourceTree = "<group>"; };
 		0D28F1C01B95A81900A2ED62 /* Picture1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Picture1ViewController.m; sourceTree = "<group>"; };
+		0D872E7A1B97D924004779BC /* Picture5ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Picture5ViewController.h; sourceTree = "<group>"; };
+		0D872E7B1B97D924004779BC /* Picture5ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Picture5ViewController.m; sourceTree = "<group>"; };
 		0DA4137E1B8D4D1000E78DC0 /* Picture21.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Picture21.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DA413821B8D4D1000E78DC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0DA413831B8D4D1000E78DC0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -192,6 +195,8 @@
 				0D28F1B41B944D6100A2ED62 /* Picture3ViewController.m */,
 				0D28F1B61B944D7400A2ED62 /* Picture4ViewController.h */,
 				0D28F1B71B944D7400A2ED62 /* Picture4ViewController.m */,
+				0D872E7A1B97D924004779BC /* Picture5ViewController.h */,
+				0D872E7B1B97D924004779BC /* Picture5ViewController.m */,
 				0D28F1B91B944D8900A2ED62 /* Picture6ViewController.h */,
 				0D28F1BA1B944D8900A2ED62 /* Picture6ViewController.m */,
 				0DA414171B8D533000E78DC0 /* QBCheckmarkView.h */,
@@ -304,6 +309,7 @@
 				0DA414281B8D533000E78DC0 /* QBAssetCell.m in Sources */,
 				0DA413871B8D4D1000E78DC0 /* AppDelegate.m in Sources */,
 				0DB9DCFB1B9186EC0062D53E /* PictureManager.m in Sources */,
+				0D872E7C1B97D924004779BC /* Picture5ViewController.m in Sources */,
 				0D28F1AF1B943AC200A2ED62 /* ClickButton.m in Sources */,
 				0DA413841B8D4D1000E78DC0 /* main.m in Sources */,
 				0DB9DCFE1B91BE0C0062D53E /* Picture21ViewController.m in Sources */,

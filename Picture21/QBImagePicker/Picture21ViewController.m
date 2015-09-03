@@ -11,21 +11,24 @@
 #import "Picture2ViewController.h"
 #import "Picture3ViewController.h"
 #import "Picture4ViewController.h"
+#import "Picture5ViewController.h"
 #import "Picture6ViewController.h"
 #import "PictureManager.h"
 #import "ClickButton.h"
+#import "SlideViewController.h"
 
 @interface Picture21ViewController () {
     
     IBOutletCollection(UIImageView) NSArray *imageViews;
     IBOutletCollection(ClickButton) NSArray *buttons;
     __weak IBOutlet UIBarButtonItem *okButton;
+    __weak IBOutlet UILabel *messageLabel;
     NSMutableArray *pictures;
-    
 }
 
 - (IBAction)buttonsPressed:(id)sender;
 - (IBAction)okButtonPressed:(id)sender;
+- (IBAction)slide:(id)sender;
 
 @end
 
@@ -45,7 +48,6 @@
     }
     
     pictures = [NSMutableArray array];
-    
 }
 
 - (IBAction)buttonsPressed:(id)sender {
@@ -53,14 +55,17 @@
     
     if (button.isClicked) {
         button.isClicked = NO;
-        button.backgroundColor = [UIColor clearColor];
-//        button.alpha = 0;
     } else {
         button.isClicked = YES;
-        button.backgroundColor = [UIColor grayColor];
-        button.alpha = 0.5;
     }
     
+    NSString *message = @"選択した写真：";
+    for (ClickButton *button in buttons) {
+        if (button.isClicked) {
+            message = [NSString stringWithFormat:@"%@%d ", message, (int)button.tag];
+        }
+    }
+    messageLabel.text = message;
 }
 
 - (IBAction)okButtonPressed:(id)sender {
@@ -70,6 +75,7 @@
         if (button.isClicked) {
             [pictures addObject:[NSNumber numberWithInt:(int)button.tag]];
         }
+        NSLog(@"%d", (int)button.tag);
     }
     
     if (pictures.count == 1) {
@@ -88,6 +94,10 @@
         Picture4ViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"picture4"];
         controller.pictures = pictures;
         [self.navigationController pushViewController:controller animated:YES];
+    } else if (pictures.count == 5) {
+        Picture5ViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"picture5"];
+        controller.pictures = pictures;
+        [self.navigationController pushViewController:controller animated:YES];
     } else if (pictures.count == 6) {
         Picture6ViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"picture6"];
         controller.pictures = pictures;
@@ -95,5 +105,10 @@
     } else {
         //
     }
+}
+
+- (IBAction)slide:(id)sender {
+    SlideViewController *controller = [[SlideViewController alloc] init];
+    [self.navigationController presentViewController:controller animated:YES completion:nil];
 }
 @end
