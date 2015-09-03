@@ -21,7 +21,7 @@
     
     [self.navigationController setToolbarHidden:YES animated:NO];
     
-    NSString *imageName = [NSString stringWithFormat:@"%d%@", [[_pictures objectAtIndex:0] intValue], @"_off"];
+    NSString *imageName = [NSString stringWithFormat:@"%d", [[_pictures objectAtIndex:0] intValue]];
     number.image = [UIImage imageNamed:imageName];
     
     NSString *path = [NSString stringWithFormat:@"%@/%d%@", [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"], [[_pictures objectAtIndex:0] intValue], @".jpg"];

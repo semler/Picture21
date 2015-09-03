@@ -7,19 +7,21 @@
 //
 
 #import "SlideViewController.h"
-#define screenWidth            [UIScreen mainScreen].bounds.size.width
-#define screenHeight           [UIScreen mainScreen].bounds.size.height
+#import <AVFoundation/AVFoundation.h>
 
-@interface SlideViewController () {
+#define slideShowTimerInterval      2.0f //スライドが切り替わる秒数を設定
+
+@interface SlideViewController () <AVAudioPlayerDelegate>{
     UIImageView *imageView;
     NSMutableArray *slideShowImages;
     int slideShowImageNum;
     NSTimer *slideShowTimer;
-    float slideShowTimerInterval;
     float slideShowFadeInDuration;
     int currentImageIndex;
     BOOL isRunningSlideShow;
 }
+
+@property(nonatomic) AVAudioPlayer *audioPlayer;
 
 @end
 
@@ -29,6 +31,8 @@
     [super viewDidLoad];
     
     self.view.backgroundColor = [UIColor blackColor];
+    //音声再生
+    [self initVoice];
     //スライドショーの設定
     [self initSlideShowImages];
     //スライドショーで表示する画像を初期化
@@ -40,6 +44,23 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
+}
+
+- (void) initVoice {
+    NSError *error = nil;
+    // 再生する audio ファイルのパスを取得
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"slide" ofType:@"wav"];
+    // パスから、再生するURLを作成する
+    NSURL *url = [[NSURL alloc] initFileURLWithPath:path];
+    // auido を再生するプレイヤーを作成する
+    self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
+    // エラーが起きたとき
+    if ( error != nil )
+    {
+        NSLog(@"Error %@", [error localizedDescription]);
+    }
+    // 自分自身をデリゲートに設定
+    [self.audioPlayer setDelegate:self];
 }
 
 //スライドショーで表示するイメージを初期化
@@ -55,8 +76,6 @@
     slideShowImageNum = (int)slideShowImages.count + 1;
     //最初に表示する画像IDを設定
     currentImageIndex = 0;
-    //スライドが切り替わる秒数を設定
-    slideShowTimerInterval = 2.0f;
     //フェードイン秒数
     slideShowFadeInDuration = 0.3;
 }
@@ -127,12 +146,18 @@
         imageView.hidden = NO;
     }
     //フェードイン開始
-    imageView.alpha = 0;
-    [UIView beginAnimations:@"fadeIn" context:nil];
-    [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
-    [UIView setAnimationDuration:slideShowFadeInDuration];
-    imageView.alpha = 1;
-    [UIView commitAnimations];
+//    imageView.alpha = 0;
+//    [UIView beginAnimations:@"fadeIn" context:nil];
+//    [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
+//    [UIView setAnimationDuration:slideShowFadeInDuration];
+//    imageView.alpha = 1;
+//    [UIView commitAnimations];
+    if (self.audioPlayer.playing) {
+        [self.audioPlayer stop];
+    }
+    [self.audioPlayer setCurrentTime:0];
+    [self.audioPlayer play];
+    [self animation:imageView];
 }
 
 //スライドショーを停止する
@@ -159,5 +184,38 @@
     return (slideShowImageNum <= currentImageIndex);
 }
 
+-(void)animation: (UIImageView *) view {
+    //なにがしかのUIViewからlayerを取得
+    CALayer *layer = view.layer;
+    
+    //CABasicAnimationオブジェクトを生成
+    //サンプルでは"position"をアニメーションさせる例。
+    //他に、transformを変更したい場合は@"transform.translate.x"などと指定する
+    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
+    
+    //アニメーション時間
+    animation.duration = slideShowTimerInterval;
+    //アニメーションの繰り返し回数
+    animation.repeatCount = MAXFLOAT;
+    //アニメーションの開始時間
+    animation.beginTime = CACurrentMediaTime(); //開始時間
+    
+    //アニメーション終了時に、逆方向にもアニメーションさせるか
+    animation.autoreverses = NO; //YESにした場合はアニメーションが往復する
+    
+    //アニメーションのイージングを制御
+    animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
+    
+    // 拡大・縮小倍率を設定
+    animation.fromValue = [NSNumber numberWithFloat:0.5]; // 開始時の倍率
+    animation.toValue = [NSNumber numberWithFloat:1.0]; // 終了時の倍率
+    
+    //アニメーション終了時、元の状態に戻すか否かの設定（サンプルではアニメーション後はそのまま）
+    animation.removedOnCompletion = NO;
+    animation.fillMode = kCAFillModeForwards;
+    
+    //アニメーションキーを設定（任意の名前）
+    [layer addAnimation:animation forKey:@"animation"];
+}
 
 @end
