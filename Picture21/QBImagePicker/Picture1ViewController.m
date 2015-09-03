@@ -9,7 +9,7 @@
 #import "Picture1ViewController.h"
 
 @interface Picture1ViewController () {
-    __weak IBOutlet UILabel *label;
+    __weak IBOutlet UIImageView *number;
     __weak IBOutlet UIImageView *imageView;
 }
 @end
@@ -21,9 +21,8 @@
     
     [self.navigationController setToolbarHidden:YES animated:NO];
     
-    if ([[_pictures objectAtIndex:0] intValue] != 0) {
-        label.text = [NSString stringWithFormat:@"%d", [[_pictures objectAtIndex:0] intValue]];
-    }
+    NSString *imageName = [NSString stringWithFormat:@"%d%@", [[_pictures objectAtIndex:0] intValue], @"_off"];
+    number.image = [UIImage imageNamed:imageName];
     
     NSString *path = [NSString stringWithFormat:@"%@/%d%@", [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"], [[_pictures objectAtIndex:0] intValue], @".jpg"];
     imageView.contentMode = UIViewContentModeScaleAspectFill;

@@ -9,7 +9,7 @@
 #import "Picture5ViewController.h"
 
 @interface Picture5ViewController () {
-    IBOutletCollection(UILabel) NSArray *labels;
+    IBOutletCollection(UIImageView) NSArray *numbers;
     IBOutletCollection(UIImageView) NSArray *imageViews;
 }
 @end
@@ -21,11 +21,11 @@
     
     [self.navigationController setToolbarHidden:YES animated:NO];
     
-    for (int i = 0; i < labels.count; i ++) {
-        UILabel *label = [labels objectAtIndex:i];
-        if ([[_pictures objectAtIndex:i] intValue] != 0) {
-            label.text = [NSString stringWithFormat:@"%d", [[_pictures objectAtIndex:i] intValue]];
-        }
+    for (int i = 0; i < numbers.count; i ++) {
+        UIImageView *numberImage = [numbers objectAtIndex:i];
+        NSString *imageName = [NSString stringWithFormat:@"%d%@", [[_pictures objectAtIndex:i] intValue], @"_off"];
+        numberImage.image = [UIImage imageNamed:imageName];
+        
         NSString *path = [NSString stringWithFormat:@"%@/%d%@", [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"], [[_pictures objectAtIndex:i] intValue], @".jpg"];
         UIImageView *imageView = [imageViews objectAtIndex:i];
         imageView.contentMode = UIViewContentModeScaleAspectFill;

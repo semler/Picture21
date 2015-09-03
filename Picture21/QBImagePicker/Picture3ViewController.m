@@ -9,9 +9,9 @@
 #import "Picture3ViewController.h"
 
 @interface Picture3ViewController () {
-    __weak IBOutlet UILabel *label1;
-    __weak IBOutlet UILabel *label2;
-    __weak IBOutlet UILabel *label3;
+    __weak IBOutlet UIImageView *number1;
+    __weak IBOutlet UIImageView *number2;
+    __weak IBOutlet UIImageView *number3;
     __weak IBOutlet UIImageView *imageView1;
     __weak IBOutlet UIImageView *imageView2;
     __weak IBOutlet UIImageView *imageView3;
@@ -25,15 +25,13 @@
     
     [self.navigationController setToolbarHidden:YES animated:NO];
     
-    if ([[_pictures objectAtIndex:0] intValue] != 0) {
-    label1.text = [NSString stringWithFormat:@"%d", [[_pictures objectAtIndex:0] intValue]];
-    }
-    if ([[_pictures objectAtIndex:1] intValue] != 0) {
-        label2.text = [NSString stringWithFormat:@"%d", [[_pictures objectAtIndex:1] intValue]];
-    }
-    if ([[_pictures objectAtIndex:2] intValue] != 0) {
-        label3.text = [NSString stringWithFormat:@"%d", [[_pictures objectAtIndex:2] intValue]];
-    }
+    NSString *imageName;
+    imageName = [NSString stringWithFormat:@"%d%@", [[_pictures objectAtIndex:0] intValue], @"_off"];
+    number1.image = [UIImage imageNamed:imageName];
+    imageName = [NSString stringWithFormat:@"%d%@", [[_pictures objectAtIndex:1] intValue], @"_off"];
+    number2.image = [UIImage imageNamed:imageName];
+    imageName = [NSString stringWithFormat:@"%d%@", [[_pictures objectAtIndex:2] intValue], @"_off"];
+    number3.image = [UIImage imageNamed:imageName];
     
     NSString *path1 = [NSString stringWithFormat:@"%@/%d%@", [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"], [[_pictures objectAtIndex:0] intValue], @".jpg"];
     NSString *path2 = [NSString stringWithFormat:@"%@/%d%@", [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"], [[_pictures objectAtIndex:1] intValue], @".jpg"];
