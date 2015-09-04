@@ -32,17 +32,17 @@
     picker.allowsMultipleSelection = YES;
     picker.showsNumberOfSelectedAssets = YES;
     
-    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(screenWidth/2-120, screenHeight/2-80, 240, 80)];
+    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(screenWidth/2-120, screenHeight/2-40, 240, 80)];
     [button setTitle:@"画像を読み込み(名前1+20枚)" forState:UIControlStateNormal];
     [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [button addTarget:self action:@selector(load) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button];
     
-    UIButton *button2 = [[UIButton alloc] initWithFrame:CGRectMake(screenWidth/2-120, screenHeight/2, 240, 80)];
-    [button2 setTitle:@"画像を読み込み(普通1+20枚)" forState:UIControlStateNormal];
-    [button2 setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    [button2 addTarget:self action:@selector(load2) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:button2];
+//    UIButton *button2 = [[UIButton alloc] initWithFrame:CGRectMake(screenWidth/2-120, screenHeight/2, 240, 80)];
+//    [button2 setTitle:@"画像を読み込み(普通1+20枚)" forState:UIControlStateNormal];
+//    [button2 setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+//    [button2 addTarget:self action:@selector(load2) forControlEvents:UIControlEventTouchUpInside];
+//    [self.view addSubview:button2];
 }
 
 -(void)viewWillAppear:(BOOL)animated {
@@ -58,9 +58,9 @@
     [self.navigationController presentViewController:picker animated:YES completion:nil];
 }
 
-- (void)load2 {
-    [PictureManager sharedManager].isNameMode = NO;
-    [self.navigationController presentViewController:picker animated:YES completion:nil];
-}
+//- (void)load2 {
+//    [PictureManager sharedManager].isNameMode = NO;
+//    [self.navigationController presentViewController:picker animated:YES completion:nil];
+//}
 
 @end
