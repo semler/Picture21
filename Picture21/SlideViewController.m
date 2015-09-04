@@ -20,6 +20,7 @@
     float slideShowFadeInDuration;
     int currentImageIndex;
     BOOL isRunningSlideShow;
+    UIButton *startButton;
 }
 
 @property(nonatomic) AVAudioPlayer *audioPlayer;
@@ -32,14 +33,19 @@
     [super viewDidLoad];
     
     self.view.backgroundColor = [UIColor blackColor];
+    
     //音声再生
     [self initVoice];
     //スライドショーの設定
     [self initSlideShowImages];
     //スライドショーで表示する画像を初期化
     [self initSlideShowImageView];
-    //スライドショー開始
-    [self startSlideShow];
+    
+    startButton = [[UIButton alloc] initWithFrame:self.view.frame];
+    startButton.backgroundColor = [UIColor clearColor];
+    [startButton addTarget:self action:@selector(start) forControlEvents:UIControlEventTouchUpInside];
+    startButton.enabled = YES;
+    [self.view addSubview:startButton];
 }
 
 - (void) viewWillAppear:(BOOL)animated {
@@ -221,6 +227,12 @@
     
     //アニメーションキーを設定（任意の名前）
     [layer addAnimation:animation forKey:@"animation"];
+}
+
+-(void)start {
+    startButton.enabled = NO;
+    //スライドショー開始
+    [self startSlideShow];
 }
 
 @end

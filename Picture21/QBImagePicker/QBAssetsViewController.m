@@ -116,6 +116,12 @@ static CGSize CGSizeScale(CGSize size, CGFloat scale) {
         NSIndexPath *indexPath = [NSIndexPath indexPathForItem:(self.fetchResult.count - 1) inSection:0];
         [self.collectionView scrollToItemAtIndexPath:indexPath atScrollPosition:UICollectionViewScrollPositionTop animated:NO];
     }
+    
+    [self.imagePickerController.selectedAssets removeAllObjects];
+    [self.collectionView reloadData];
+    _isSecond = NO;
+    [self updateDoneButtonState];
+    [self updateSelectionInfo];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -739,4 +745,5 @@ static CGSize CGSizeScale(CGSize size, CGFloat scale) {
     [self.collectionView reloadData];
     _isSecond = NO;
 }
+
 @end

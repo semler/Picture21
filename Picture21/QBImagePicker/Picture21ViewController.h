@@ -10,4 +10,6 @@
 
 @interface Picture21ViewController : UIViewController
 
+@property (nonatomic, strong) NSMutableOrderedSet *selectedAssets;
+
 @end
