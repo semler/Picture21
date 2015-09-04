@@ -68,6 +68,10 @@ static CGSize CGSizeScale(CGSize size, CGFloat scale) {
 @property (nonatomic, assign) BOOL disableScrollToBottom;
 @property (nonatomic, strong) NSIndexPath *lastSelectedItemIndexPath;
 
+@property (nonatomic) BOOL isSecond;
+
+- (IBAction)clear:(id)sender;
+
 @end
 
 @implementation QBAssetsViewController
@@ -609,7 +613,20 @@ static CGSize CGSizeScale(CGSize size, CGFloat scale) {
         
         // Add asset to set
         if ([PictureManager sharedManager].isNameMode) {
-            [selectedAssets addObject:asset];
+            if (!_isSecond) {
+                [selectedAssets addObject:asset];
+                _isSecond = YES;
+            } else {
+                for (int i = (int)indexPath.item; i < (int)indexPath.item + 20; i++) {
+                    if (i >= self.fetchResult.count) {
+                        break;
+                    }
+                    PHAsset *asset = self.fetchResult[i];
+                    [selectedAssets addObject:asset];
+                }
+                
+                [self.collectionView reloadData];
+            }
         } else {
             for (int i = (int)indexPath.item; i < (int)indexPath.item + 21; i++) {
                 if (i >= self.fetchResult.count) {
@@ -658,6 +675,10 @@ static CGSize CGSizeScale(CGSize size, CGFloat scale) {
     
     // Remove asset from set
     [selectedAssets removeObject:asset];
+    
+    if (self.imagePickerController.selectedAssets.count == 0) {
+        _isSecond = NO;
+    }
     
     self.lastSelectedItemIndexPath = nil;
     
@@ -713,4 +734,9 @@ static CGSize CGSizeScale(CGSize size, CGFloat scale) {
 
 }
 
+- (IBAction)clear:(id)sender {
+    [self.imagePickerController.selectedAssets removeAllObjects];
+    [self.collectionView reloadData];
+    _isSecond = NO;
+}
 @end

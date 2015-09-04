@@ -109,7 +109,7 @@
             </objects>
             <point key="canvasLocation" x="1205" y="1454"/>
         </scene>
-        <!--Album Title-->
+        <!--Assets View Controller-->
         <scene sceneID="ozY-oO-5JA">
             <objects>
                 <collectionViewController storyboardIdentifier="QBAssetsViewController" id="QiH-NZ-ZGN" customClass="QBAssetsViewController" sceneMemberID="viewController">
@@ -240,7 +240,18 @@
                             <outlet property="delegate" destination="QiH-NZ-ZGN" id="0SZ-eY-tkn"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="Album Title" id="wKf-eb-U1x">
+                    <navigationItem key="navigationItem" id="wKf-eb-U1x">
+                        <nil key="title"/>
+                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Iy7-2c-KRI">
+                            <rect key="frame" x="452" y="7" width="120" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="クリア">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="clear:" destination="QiH-NZ-ZGN" eventType="touchUpInside" id="AkB-HW-5lb"/>
+                            </connections>
+                        </button>
                         <barButtonItem key="rightBarButtonItem" title="選択" id="nai-ZV-lR8">
                             <connections>
                                 <action selector="done:" destination="QiH-NZ-ZGN" id="RYV-Ik-8ry"/>
