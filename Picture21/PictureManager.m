@@ -21,7 +21,6 @@ static PictureManager *manager = nil;
 
 - (id)init
 {
-    
     return self;
 }
 

@@ -8,6 +8,7 @@
 
 #import "SlideViewController.h"
 #import <AVFoundation/AVFoundation.h>
+#import "PictureManager.h"
 
 #define slideShowTimerInterval      1.0f //スライドが切り替わる秒数を設定
 
@@ -128,6 +129,7 @@
     if ([self isLastImage]) {
 //        currentImageIndex = -1;
         [self stopSlideShow];
+        [PictureManager sharedManager].isSlide = YES;
         [self dismissViewControllerAnimated:NO completion:nil];
         return;
     }
@@ -150,28 +152,16 @@
         imageView.hidden = NO;
     }
     
-    if (currentImageIndex == 21) {
-        NSError *error = nil;
-        // 再生する audio ファイルのパスを取得
-        NSString *path = [[NSBundle mainBundle] pathForResource:@"drop" ofType:@"wav"];
-        // パスから、再生するURLを作成する
-        NSURL *url = [[NSURL alloc] initFileURLWithPath:path];
-        // auido を再生するプレイヤーを作成する
-        self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
-        // エラーが起きたとき
-        if ( error != nil )
-        {
-            NSLog(@"Error %@", [error localizedDescription]);
+    if (currentImageIndex < 21) {
+        if (self.audioPlayer.playing) {
+            [self.audioPlayer stop];
         }
-        // 自分自身をデリゲートに設定
-        [self.audioPlayer setDelegate:self];
+        [self.audioPlayer setCurrentTime:0];
+        [self.audioPlayer play];
+    } else {
+        //
     }
     
-    if (self.audioPlayer.playing) {
-        [self.audioPlayer stop];
-    }
-    [self.audioPlayer setCurrentTime:0];
-    [self.audioPlayer play];
     [self animation:imageView];
 }
 

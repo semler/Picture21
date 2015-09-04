@@ -13,6 +13,6 @@
 + (PictureManager *)sharedManager;
 
 @property (nonatomic) BOOL isNameMode;
-
+@property (nonatomic) BOOL isSlide;
 
 @end

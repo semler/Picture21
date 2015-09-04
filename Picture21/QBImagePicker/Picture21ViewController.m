@@ -16,15 +16,19 @@
 #import "PictureManager.h"
 #import "ClickButton.h"
 #import "SlideViewController.h"
+#import <AVFoundation/AVFoundation.h>
 
-@interface Picture21ViewController () {
+@interface Picture21ViewController () <AVAudioPlayerDelegate> {
     
     IBOutletCollection(UIImageView) NSArray *imageViews;
     IBOutletCollection(ClickButton) NSArray *buttons;
     __weak IBOutlet UIBarButtonItem *okButton;
     __weak IBOutlet UILabel *messageLabel;
     NSMutableArray *pictures;
+    __weak IBOutlet UIView *bgView;
 }
+
+@property(nonatomic) AVAudioPlayer *audioPlayer;
 
 - (IBAction)buttonsPressed:(id)sender;
 - (IBAction)okButtonPressed:(id)sender;
@@ -54,9 +58,30 @@
 -(void) viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-    
-    
-    
+    if ([PictureManager sharedManager].isSlide) {
+        NSError *error = nil;
+        // 再生する audio ファイルのパスを取得
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"drop" ofType:@"wav"];
+        // パスから、再生するURLを作成する
+        NSURL *url = [[NSURL alloc] initFileURLWithPath:path];
+        // auido を再生するプレイヤーを作成する
+        self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
+        // エラーが起きたとき
+        if ( error != nil )
+        {
+            NSLog(@"Error %@", [error localizedDescription]);
+        }
+        // 自分自身をデリゲートに設定
+        [self.audioPlayer setDelegate:self];
+        [self.audioPlayer setCurrentTime:0];
+        [self.audioPlayer play];
+
+        bgView.frame = CGRectMake(0, -704, bgView.frame.size.width, bgView.frame.size.height);
+        [UIView animateWithDuration:1.0f animations:^{
+            bgView.frame = CGRectMake(0, 0, bgView.frame.size.width, bgView.frame.size.height);
+        }];
+        [PictureManager sharedManager].isSlide = NO;
+    }
 }
 
 - (IBAction)buttonsPressed:(id)sender {
@@ -126,4 +151,5 @@
     SlideViewController *controller = [[SlideViewController alloc] init];
     [self.navigationController presentViewController:controller animated:YES completion:nil];
 }
+
 @end
