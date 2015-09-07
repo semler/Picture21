@@ -84,7 +84,7 @@
         [slideShowImages addObject:path];
     }
     //総画像ファイル数を取得
-    slideShowImageNum = (int)slideShowImages.count + 1;
+    slideShowImageNum = (int)slideShowImages.count;
     //最初に表示する画像IDを設定
     currentImageIndex = 0;
     //フェードイン秒数
@@ -151,8 +151,6 @@
     //画像ファイル名をセット
     if (currentImageIndex == 0) {
         imageView.hidden = YES;
-    } else if (currentImageIndex == 21) {
-        imageView.hidden = YES;
     } else {
         imageView.image = [UIImage imageWithContentsOfFile:[slideShowImages objectAtIndex:currentImageIndex-1]];
         imageView.hidden = NO;
@@ -218,7 +216,7 @@
     animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
     
     // 拡大・縮小倍率を設定
-    animation.fromValue = [NSNumber numberWithFloat:0.5]; // 開始時の倍率
+    animation.fromValue = [NSNumber numberWithFloat:0.9]; // 開始時の倍率
     animation.toValue = [NSNumber numberWithFloat:1.0]; // 終了時の倍率
     
     //アニメーション終了時、元の状態に戻すか否かの設定（サンプルではアニメーション後はそのまま）

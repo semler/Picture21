@@ -33,6 +33,7 @@
 - (IBAction)buttonsPressed:(id)sender;
 - (IBAction)okButtonPressed:(id)sender;
 - (IBAction)slide:(id)sender;
+- (IBAction)clear:(id)sender;
 
 @end
 
@@ -74,10 +75,10 @@
         // 自分自身をデリゲートに設定
         [self.audioPlayer setDelegate:self];
         [self.audioPlayer setCurrentTime:0];
-        [self.audioPlayer play];
+        [self performSelector:@selector(play) withObject:nil afterDelay:0.3];
 
         bgView.frame = CGRectMake(0, -704, bgView.frame.size.width, bgView.frame.size.height);
-        [UIView animateWithDuration:1.0f animations:^{
+        [UIView animateWithDuration:0.3f animations:^{
             bgView.frame = CGRectMake(0, 0, bgView.frame.size.width, bgView.frame.size.height);
         }];
         [PictureManager sharedManager].isSlide = NO;
@@ -150,6 +151,18 @@
 - (IBAction)slide:(id)sender {
     SlideViewController *controller = [[SlideViewController alloc] init];
     [self.navigationController presentViewController:controller animated:YES completion:nil];
+}
+
+- (IBAction)clear:(id)sender {
+    for (ClickButton *button in buttons) {
+        button.isClicked = NO;
+    }
+    messageLabel.text = @"";
+    [okButton setEnabled:NO];
+}
+
+-(void) play {
+    [self.audioPlayer play];
 }
 
 @end
