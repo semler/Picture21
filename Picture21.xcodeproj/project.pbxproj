@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D0F70C21B9D989D000A53B5 /* Picture7ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D0F70C11B9D989D000A53B5 /* Picture7ViewController.m */; };
+		0D0F70C51B9D98AD000A53B5 /* Picture8ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D0F70C41B9D98AD000A53B5 /* Picture8ViewController.m */; };
+		0D0F70C81B9DA8C2000A53B5 /* SlideViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D0F70C71B9DA8C2000A53B5 /* SlideViewController2.m */; };
+		0D0F70CB1B9DAACE000A53B5 /* SlideViewController3.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D0F70CA1B9DAACE000A53B5 /* SlideViewController3.m */; };
 		0D28F1AF1B943AC200A2ED62 /* ClickButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D28F1AE1B943AC200A2ED62 /* ClickButton.m */; };
 		0D28F1B21B94486600A2ED62 /* Picture2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D28F1B11B94486600A2ED62 /* Picture2ViewController.m */; };
 		0D28F1B51B944D6100A2ED62 /* Picture3ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D28F1B41B944D6100A2ED62 /* Picture3ViewController.m */; };
@@ -41,6 +45,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0D0F70C01B9D989D000A53B5 /* Picture7ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Picture7ViewController.h; sourceTree = "<group>"; };
+		0D0F70C11B9D989D000A53B5 /* Picture7ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Picture7ViewController.m; sourceTree = "<group>"; };
+		0D0F70C31B9D98AD000A53B5 /* Picture8ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Picture8ViewController.h; sourceTree = "<group>"; };
+		0D0F70C41B9D98AD000A53B5 /* Picture8ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Picture8ViewController.m; sourceTree = "<group>"; };
+		0D0F70C61B9DA8C2000A53B5 /* SlideViewController2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideViewController2.h; sourceTree = "<group>"; };
+		0D0F70C71B9DA8C2000A53B5 /* SlideViewController2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideViewController2.m; sourceTree = "<group>"; };
+		0D0F70C91B9DAACE000A53B5 /* SlideViewController3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideViewController3.h; sourceTree = "<group>"; };
+		0D0F70CA1B9DAACE000A53B5 /* SlideViewController3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideViewController3.m; sourceTree = "<group>"; };
 		0D28F1AD1B943AC200A2ED62 /* ClickButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClickButton.h; sourceTree = "<group>"; };
 		0D28F1AE1B943AC200A2ED62 /* ClickButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClickButton.m; sourceTree = "<group>"; };
 		0D28F1B01B94486600A2ED62 /* Picture2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Picture2ViewController.h; sourceTree = "<group>"; };
@@ -143,6 +155,10 @@
 				0DA413891B8D4D1000E78DC0 /* ViewController.m */,
 				0D28F1BC1B9550F600A2ED62 /* SlideViewController.h */,
 				0D28F1BD1B9550F600A2ED62 /* SlideViewController.m */,
+				0D0F70C61B9DA8C2000A53B5 /* SlideViewController2.h */,
+				0D0F70C71B9DA8C2000A53B5 /* SlideViewController2.m */,
+				0D0F70C91B9DAACE000A53B5 /* SlideViewController3.h */,
+				0D0F70CA1B9DAACE000A53B5 /* SlideViewController3.m */,
 				0DB9DCF91B9186EC0062D53E /* PictureManager.h */,
 				0DB9DCFA1B9186EC0062D53E /* PictureManager.m */,
 				0D28F1AD1B943AC200A2ED62 /* ClickButton.h */,
@@ -191,6 +207,10 @@
 				0D872E7B1B97D924004779BC /* Picture5ViewController.m */,
 				0D28F1B91B944D8900A2ED62 /* Picture6ViewController.h */,
 				0D28F1BA1B944D8900A2ED62 /* Picture6ViewController.m */,
+				0D0F70C01B9D989D000A53B5 /* Picture7ViewController.h */,
+				0D0F70C11B9D989D000A53B5 /* Picture7ViewController.m */,
+				0D0F70C31B9D98AD000A53B5 /* Picture8ViewController.h */,
+				0D0F70C41B9D98AD000A53B5 /* Picture8ViewController.m */,
 				0DA414171B8D533000E78DC0 /* QBCheckmarkView.h */,
 				0DA414181B8D533000E78DC0 /* QBCheckmarkView.m */,
 				0DA414191B8D533000E78DC0 /* QBImagePicker.h */,
@@ -290,8 +310,10 @@
 				0D28F1B21B94486600A2ED62 /* Picture2ViewController.m in Sources */,
 				0DA414261B8D533000E78DC0 /* QBAlbumCell.m in Sources */,
 				0DA414291B8D533000E78DC0 /* QBAssetsViewController.m in Sources */,
+				0D0F70C81B9DA8C2000A53B5 /* SlideViewController2.m in Sources */,
 				0D28F1C11B95A81900A2ED62 /* Picture1ViewController.m in Sources */,
 				0DA4142C1B8D533000E78DC0 /* QBImagePickerController.m in Sources */,
+				0D0F70C51B9D98AD000A53B5 /* Picture8ViewController.m in Sources */,
 				0DA414271B8D533000E78DC0 /* QBAlbumsViewController.m in Sources */,
 				0DA4142A1B8D533000E78DC0 /* QBCheckmarkView.m in Sources */,
 				0DA4142D1B8D533000E78DC0 /* QBSlomoIconView.m in Sources */,
@@ -304,10 +326,12 @@
 				0DA413871B8D4D1000E78DC0 /* AppDelegate.m in Sources */,
 				0DB9DCFB1B9186EC0062D53E /* PictureManager.m in Sources */,
 				0D872E7C1B97D924004779BC /* Picture5ViewController.m in Sources */,
+				0D0F70CB1B9DAACE000A53B5 /* SlideViewController3.m in Sources */,
 				0D28F1AF1B943AC200A2ED62 /* ClickButton.m in Sources */,
 				0DA413841B8D4D1000E78DC0 /* main.m in Sources */,
 				0DB9DCFE1B91BE0C0062D53E /* Picture21ViewController.m in Sources */,
 				0DA4142E1B8D533000E78DC0 /* QBVideoIconView.m in Sources */,
+				0D0F70C21B9D989D000A53B5 /* Picture7ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

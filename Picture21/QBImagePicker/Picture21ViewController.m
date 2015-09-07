@@ -13,9 +13,13 @@
 #import "Picture4ViewController.h"
 #import "Picture5ViewController.h"
 #import "Picture6ViewController.h"
+#import "Picture7ViewController.h"
+#import "Picture8ViewController.h"
 #import "PictureManager.h"
 #import "ClickButton.h"
 #import "SlideViewController.h"
+#import "SlideViewController2.h"
+#import "SlideViewController3.h"
 #import <AVFoundation/AVFoundation.h>
 
 @interface Picture21ViewController () <AVAudioPlayerDelegate> {
@@ -32,7 +36,9 @@
 
 - (IBAction)buttonsPressed:(id)sender;
 - (IBAction)okButtonPressed:(id)sender;
-- (IBAction)slide:(id)sender;
+- (IBAction)slide1:(id)sender;
+- (IBAction)slide2:(id)sender;
+- (IBAction)slide3:(id)sender;
 - (IBAction)clear:(id)sender;
 
 @end
@@ -103,7 +109,7 @@
         }
     }
     messageLabel.text = message;
-    if (sum >= 1 && sum <= 6) {
+    if (sum >= 1 && sum <= 8) {
         [okButton setEnabled:YES];
     } else {
         [okButton setEnabled:NO];
@@ -143,13 +149,31 @@
         Picture6ViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"picture6"];
         controller.pictures = pictures;
         [self.navigationController pushViewController:controller animated:YES];
+    } else if (pictures.count == 7) {
+        Picture7ViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"picture7"];
+        controller.pictures = pictures;
+        [self.navigationController pushViewController:controller animated:YES];
+    } else if (pictures.count == 8) {
+        Picture8ViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"picture8"];
+        controller.pictures = pictures;
+        [self.navigationController pushViewController:controller animated:YES];
     } else {
         //
     }
 }
 
-- (IBAction)slide:(id)sender {
+- (IBAction)slide1:(id)sender {
     SlideViewController *controller = [[SlideViewController alloc] init];
+    [self.navigationController presentViewController:controller animated:YES completion:nil];
+}
+
+- (IBAction)slide2:(id)sender {
+    SlideViewController2 *controller = [[SlideViewController2 alloc] init];
+    [self.navigationController presentViewController:controller animated:YES completion:nil];
+}
+
+- (IBAction)slide3:(id)sender {
+    SlideViewController3 *controller = [[SlideViewController3 alloc] init];
     [self.navigationController presentViewController:controller animated:YES completion:nil];
 }
 
