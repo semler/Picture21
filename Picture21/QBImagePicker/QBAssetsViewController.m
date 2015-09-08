@@ -742,6 +742,8 @@ static CGSize CGSizeScale(CGSize size, CGFloat scale) {
 
 - (IBAction)clear:(id)sender {
     [self.imagePickerController.selectedAssets removeAllObjects];
+    [self updateDoneButtonState];
+    [self updateSelectionInfo];
     [self.collectionView reloadData];
     _isSecond = NO;
 }
