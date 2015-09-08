@@ -12,7 +12,7 @@
 
 + (PictureManager *)sharedManager;
 
-@property (nonatomic) BOOL isNameMode;
+@property (nonatomic) BOOL isNameMode; // 20枚、21枚
 @property (nonatomic) BOOL isSlide;
 
 @end

@@ -79,7 +79,13 @@
 {
     //スライドショーで使用する画像タイトル定義
     slideShowImages = [NSMutableArray array];
-    for (int i = 1; i < 21; i ++) {
+    int start;
+    if ([PictureManager sharedManager].isNameMode) {
+        start = 1;
+    } else {
+        start = 0;
+    }
+    for (int i = start; i < 21; i ++) {
         NSString *path = [NSString stringWithFormat:@"%@/%d%@", [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"], i, @".jpg"];
         [slideShowImages addObject:path];
     }
