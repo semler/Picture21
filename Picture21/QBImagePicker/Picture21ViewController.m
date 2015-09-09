@@ -68,7 +68,7 @@
     if ([PictureManager sharedManager].isSlide) {
         NSError *error = nil;
         // 再生する audio ファイルのパスを取得
-        NSString *path = [[NSBundle mainBundle] pathForResource:@"drop" ofType:@"wav"];
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"drop9" ofType:@"wav"];
         // パスから、再生するURLを作成する
         NSURL *url = [[NSURL alloc] initFileURLWithPath:path];
         // auido を再生するプレイヤーを作成する

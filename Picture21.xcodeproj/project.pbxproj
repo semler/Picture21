@@ -12,6 +12,9 @@
 		0D0F70C81B9DA8C2000A53B5 /* SlideViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D0F70C71B9DA8C2000A53B5 /* SlideViewController2.m */; };
 		0D0F70CB1B9DAACE000A53B5 /* SlideViewController3.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D0F70CA1B9DAACE000A53B5 /* SlideViewController3.m */; };
 		0D0F70CD1B9EDA76000A53B5 /* slide.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0D0F70CC1B9EDA76000A53B5 /* slide.wav */; };
+		0D0F70D11B9FDD6F000A53B5 /* drop3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0D0F70CE1B9FDD6F000A53B5 /* drop3.wav */; };
+		0D0F70D21B9FDD6F000A53B5 /* drop6.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0D0F70CF1B9FDD6F000A53B5 /* drop6.wav */; };
+		0D0F70D31B9FDD6F000A53B5 /* drop9.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0D0F70D01B9FDD6F000A53B5 /* drop9.wav */; };
 		0D28F1AF1B943AC200A2ED62 /* ClickButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D28F1AE1B943AC200A2ED62 /* ClickButton.m */; };
 		0D28F1B21B94486600A2ED62 /* Picture2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D28F1B11B94486600A2ED62 /* Picture2ViewController.m */; };
 		0D28F1B51B944D6100A2ED62 /* Picture3ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D28F1B41B944D6100A2ED62 /* Picture3ViewController.m */; };
@@ -54,6 +57,9 @@
 		0D0F70C91B9DAACE000A53B5 /* SlideViewController3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideViewController3.h; sourceTree = "<group>"; };
 		0D0F70CA1B9DAACE000A53B5 /* SlideViewController3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideViewController3.m; sourceTree = "<group>"; };
 		0D0F70CC1B9EDA76000A53B5 /* slide.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = slide.wav; sourceTree = "<group>"; };
+		0D0F70CE1B9FDD6F000A53B5 /* drop3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = drop3.wav; sourceTree = "<group>"; };
+		0D0F70CF1B9FDD6F000A53B5 /* drop6.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = drop6.wav; sourceTree = "<group>"; };
+		0D0F70D01B9FDD6F000A53B5 /* drop9.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = drop9.wav; sourceTree = "<group>"; };
 		0D28F1AD1B943AC200A2ED62 /* ClickButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClickButton.h; sourceTree = "<group>"; };
 		0D28F1AE1B943AC200A2ED62 /* ClickButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClickButton.m; sourceTree = "<group>"; };
 		0D28F1B01B94486600A2ED62 /* Picture2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Picture2ViewController.h; sourceTree = "<group>"; };
@@ -129,6 +135,9 @@
 		0DA413751B8D4D1000E78DC0 = {
 			isa = PBXGroup;
 			children = (
+				0D0F70CE1B9FDD6F000A53B5 /* drop3.wav */,
+				0D0F70CF1B9FDD6F000A53B5 /* drop6.wav */,
+				0D0F70D01B9FDD6F000A53B5 /* drop9.wav */,
 				0D0F70CC1B9EDA76000A53B5 /* slide.wav */,
 				0D872E851B9839F9004779BC /* drop.wav */,
 				0D872E811B981A0E004779BC /* AVFoundation.framework */,
@@ -288,6 +297,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D0F70D21B9FDD6F000A53B5 /* drop6.wav in Resources */,
 				0DA4138D1B8D4D1000E78DC0 /* Main.storyboard in Resources */,
 				0D872E861B9839F9004779BC /* drop.wav in Resources */,
 				0DA414241B8D533000E78DC0 /* QBImagePicker.strings in Resources */,
@@ -295,7 +305,9 @@
 				0DA414251B8D533000E78DC0 /* Info.plist in Resources */,
 				0DA4138F1B8D4D1000E78DC0 /* Images.xcassets in Resources */,
 				0D0F70CD1B9EDA76000A53B5 /* slide.wav in Resources */,
+				0D0F70D11B9FDD6F000A53B5 /* drop3.wav in Resources */,
 				0DA4142B1B8D533000E78DC0 /* QBImagePicker.storyboard in Resources */,
+				0D0F70D31B9FDD6F000A53B5 /* drop9.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
