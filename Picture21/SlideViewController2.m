@@ -162,15 +162,13 @@
         imageView.hidden = NO;
     }
     
-    if (currentImageIndex < 21) {
+//    if (currentImageIndex < 21) {
         if (self.audioPlayer.playing) {
             [self.audioPlayer stop];
         }
         [self.audioPlayer setCurrentTime:0];
         [self.audioPlayer play];
-    } else {
-        //
-    }
+//    }
     
 //    [self animation:imageView];
 }

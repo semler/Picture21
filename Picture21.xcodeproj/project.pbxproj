@@ -11,6 +11,7 @@
 		0D0F70C51B9D98AD000A53B5 /* Picture8ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D0F70C41B9D98AD000A53B5 /* Picture8ViewController.m */; };
 		0D0F70C81B9DA8C2000A53B5 /* SlideViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D0F70C71B9DA8C2000A53B5 /* SlideViewController2.m */; };
 		0D0F70CB1B9DAACE000A53B5 /* SlideViewController3.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D0F70CA1B9DAACE000A53B5 /* SlideViewController3.m */; };
+		0D0F70CD1B9EDA76000A53B5 /* slide.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0D0F70CC1B9EDA76000A53B5 /* slide.wav */; };
 		0D28F1AF1B943AC200A2ED62 /* ClickButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D28F1AE1B943AC200A2ED62 /* ClickButton.m */; };
 		0D28F1B21B94486600A2ED62 /* Picture2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D28F1B11B94486600A2ED62 /* Picture2ViewController.m */; };
 		0D28F1B51B944D6100A2ED62 /* Picture3ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D28F1B41B944D6100A2ED62 /* Picture3ViewController.m */; };
@@ -20,7 +21,6 @@
 		0D28F1C11B95A81900A2ED62 /* Picture1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D28F1C01B95A81900A2ED62 /* Picture1ViewController.m */; };
 		0D872E7C1B97D924004779BC /* Picture5ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D872E7B1B97D924004779BC /* Picture5ViewController.m */; };
 		0D872E821B981A0E004779BC /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D872E811B981A0E004779BC /* AVFoundation.framework */; };
-		0D872E841B9822E5004779BC /* slide.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0D872E831B9822E5004779BC /* slide.wav */; };
 		0D872E861B9839F9004779BC /* drop.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0D872E851B9839F9004779BC /* drop.wav */; };
 		0DA413841B8D4D1000E78DC0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DA413831B8D4D1000E78DC0 /* main.m */; };
 		0DA413871B8D4D1000E78DC0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DA413861B8D4D1000E78DC0 /* AppDelegate.m */; };
@@ -53,6 +53,7 @@
 		0D0F70C71B9DA8C2000A53B5 /* SlideViewController2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideViewController2.m; sourceTree = "<group>"; };
 		0D0F70C91B9DAACE000A53B5 /* SlideViewController3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideViewController3.h; sourceTree = "<group>"; };
 		0D0F70CA1B9DAACE000A53B5 /* SlideViewController3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideViewController3.m; sourceTree = "<group>"; };
+		0D0F70CC1B9EDA76000A53B5 /* slide.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = slide.wav; sourceTree = "<group>"; };
 		0D28F1AD1B943AC200A2ED62 /* ClickButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClickButton.h; sourceTree = "<group>"; };
 		0D28F1AE1B943AC200A2ED62 /* ClickButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClickButton.m; sourceTree = "<group>"; };
 		0D28F1B01B94486600A2ED62 /* Picture2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Picture2ViewController.h; sourceTree = "<group>"; };
@@ -70,7 +71,6 @@
 		0D872E7A1B97D924004779BC /* Picture5ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Picture5ViewController.h; sourceTree = "<group>"; };
 		0D872E7B1B97D924004779BC /* Picture5ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Picture5ViewController.m; sourceTree = "<group>"; };
 		0D872E811B981A0E004779BC /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		0D872E831B9822E5004779BC /* slide.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = slide.wav; sourceTree = "<group>"; };
 		0D872E851B9839F9004779BC /* drop.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = drop.wav; sourceTree = "<group>"; };
 		0DA4137E1B8D4D1000E78DC0 /* Picture21.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Picture21.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DA413821B8D4D1000E78DC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -129,7 +129,7 @@
 		0DA413751B8D4D1000E78DC0 = {
 			isa = PBXGroup;
 			children = (
-				0D872E831B9822E5004779BC /* slide.wav */,
+				0D0F70CC1B9EDA76000A53B5 /* slide.wav */,
 				0D872E851B9839F9004779BC /* drop.wav */,
 				0D872E811B981A0E004779BC /* AVFoundation.framework */,
 				0DA413801B8D4D1000E78DC0 /* Picture21 */,
@@ -290,11 +290,11 @@
 			files = (
 				0DA4138D1B8D4D1000E78DC0 /* Main.storyboard in Resources */,
 				0D872E861B9839F9004779BC /* drop.wav in Resources */,
-				0D872E841B9822E5004779BC /* slide.wav in Resources */,
 				0DA414241B8D533000E78DC0 /* QBImagePicker.strings in Resources */,
 				0DA413921B8D4D1000E78DC0 /* LaunchScreen.xib in Resources */,
 				0DA414251B8D533000E78DC0 /* Info.plist in Resources */,
 				0DA4138F1B8D4D1000E78DC0 /* Images.xcassets in Resources */,
+				0D0F70CD1B9EDA76000A53B5 /* slide.wav in Resources */,
 				0DA4142B1B8D533000E78DC0 /* QBImagePicker.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

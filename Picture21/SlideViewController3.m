@@ -167,14 +167,12 @@
         imageView.hidden = NO;
     }
     
-    if (currentImageIndex < 21) {
+    if (currentImageIndex == 1) {
         if (self.audioPlayer.playing) {
             [self.audioPlayer stop];
         }
         [self.audioPlayer setCurrentTime:0];
         [self.audioPlayer play];
-    } else {
-        //
     }
     
     imageView.alpha = 1;
@@ -183,6 +181,19 @@
         moveView.frame = CGRectMake(0, 1, 1, 1);
     } completion:^(BOOL finished){
         imageView.alpha = 0;
+        int end;
+        if ([PictureManager sharedManager].isNameMode) {
+            end = 20;
+        } else {
+            end = 21;
+        }
+        if (currentImageIndex < end) {
+            if (self.audioPlayer.playing) {
+                [self.audioPlayer stop];
+            }
+            [self.audioPlayer setCurrentTime:0];
+            [self.audioPlayer play];
+        }
     }];
     
 //    [self animation:imageView];
