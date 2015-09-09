@@ -129,6 +129,18 @@
     if ([self isLastImage]) {
         currentImageIndex = -1;
     }
+    
+    moveView.frame = CGRectMake(0, 0, 1, 1);
+    [UIView animateWithDuration:1.0f animations:^{
+        moveView.frame = CGRectMake(0, 1, 1, 1);
+    } completion:^(BOOL finished){
+        if (self.audioPlayer.playing) {
+            [self.audioPlayer stop];
+        }
+        [self.audioPlayer setCurrentTime:0];
+        [self.audioPlayer play];
+    }];
+    
     //スライドショーのタイマー定義
     slideShowTimer = [NSTimer scheduledTimerWithTimeInterval:slideShowTimerInterval
                                                            target:self
@@ -167,13 +179,13 @@
         imageView.hidden = NO;
     }
     
-    if (currentImageIndex == 1) {
-        if (self.audioPlayer.playing) {
-            [self.audioPlayer stop];
-        }
-        [self.audioPlayer setCurrentTime:0];
-        [self.audioPlayer play];
-    }
+//    if (currentImageIndex == 1) {
+//        if (self.audioPlayer.playing) {
+//            [self.audioPlayer stop];
+//        }
+//        [self.audioPlayer setCurrentTime:0];
+//        [self.audioPlayer play];
+//    }
     
     imageView.alpha = 1;
     moveView.frame = CGRectMake(0, 0, 1, 1);
