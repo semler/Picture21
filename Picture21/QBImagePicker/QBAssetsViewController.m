@@ -191,6 +191,8 @@ static CGSize CGSizeScale(CGSize size, CGFloat scale) {
 
 - (IBAction)done:(id)sender
 {
+    [self updateCachedAssets];
+    
     for (int i = 0; i < self.imagePickerController.selectedAssets.count; i ++) {
         PHAsset *asset = [self.imagePickerController.selectedAssets objectAtIndex:i];
         
