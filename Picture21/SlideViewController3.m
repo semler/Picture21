@@ -210,7 +210,7 @@
     
     //最後の画像になったらIDをリセットする
     if ([self isLastImage]) {
-        [self performSelector:@selector(stop) withObject:nil afterDelay:1.0];
+        [self performSelector:@selector(stop) withObject:nil afterDelay:1.05];
     }
     
 //    [self animation:imageView];
