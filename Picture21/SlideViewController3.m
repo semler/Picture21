@@ -208,7 +208,20 @@
         }
     }];
     
+    //最後の画像になったらIDをリセットする
+    if ([self isLastImage]) {
+        [self performSelector:@selector(stop) withObject:nil afterDelay:1.0];
+    }
+    
 //    [self animation:imageView];
+}
+
+-(void)stop {
+    //        currentImageIndex = -1;
+    [self stopSlideShow];
+    [PictureManager sharedManager].isSlide = YES;
+    [self dismissViewControllerAnimated:NO completion:nil];
+    return;
 }
 
 //スライドショーを停止する
