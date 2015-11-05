@@ -191,7 +191,7 @@ static CGSize CGSizeScale(CGSize size, CGFloat scale) {
 
 - (IBAction)done:(id)sender
 {
-    [self updateCachedAssets];
+//    [self updateCachedAssets];
     
     for (int i = 0; i < self.imagePickerController.selectedAssets.count; i ++) {
         PHAsset *asset = [self.imagePickerController.selectedAssets objectAtIndex:i];
@@ -210,10 +210,13 @@ static CGSize CGSizeScale(CGSize size, CGFloat scale) {
                                   }];
     }
     
+    [self performSelector:@selector(go) withObject:nil afterDelay:0.1];
+}
+
+-(void) go {
     Picture21ViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"picture21"];
     [self.navigationController pushViewController:controller animated:YES];
 }
-
 
 #pragma mark - Toolbar
 
